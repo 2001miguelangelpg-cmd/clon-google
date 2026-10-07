@@ -1,0 +1,243 @@
+:root {
+    --primary-text: #202124;
+    --secondary-text: #5f6368;
+    --bg-color: #ffffff;
+    --border-color: #dfe1e5;
+    --link-color: #1a0dab;
+    --footer-bg: #f2f2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-text);
+    font-size: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px;
+    gap: 15px;
+}
+
+.header-links {
+    margin-left: 20px;
+}
+
+.apps-icon {
+    cursor: pointer;
+    color: var(--secondary-text);
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.apps-icon:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #0080ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    font-size: 90px;
+    font-weight: bold;
+    letter-spacing: -5px;
+    margin-bottom: 25px;
+    user-select: none;
+}
+
+.g-blue {
+    color: #4285f4;
+}
+
+.g-red {
+    color: #ea4335;
+}
+
+.g-yellow {
+    color: #fbbc05;
+}
+
+.g-green {
+    color: #34a853;
+}
+
+/* ESTRUCTURA DEL BUSCADOR */
+.search-container {
+    width: 100%;
+    max-width: 584px;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.search-container:hover {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: transparent;
+}
+
+.search-icon {
+    color: #9aa0a6;
+    margin-right: 12px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    height: 44px;
+    background: transparent;
+}
+
+.search-icons-right {
+    display: flex;
+    gap: 12px;
+}
+
+.mic-icon {
+    color: #4285f4;
+    cursor: pointer;
+}
+
+.lens-icon {
+    color: #ea4335;
+    cursor: pointer;
+}
+
+/* BOTONES */
+.buttons-container {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    color: #3c4043;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.btn:hover {
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* IDIOMAS */
+.language-offer {
+    margin-top: 30px;
+    font-size: 13px;
+    color: var(--secondary-text);
+}
+
+.language-offer a {
+    color: var(--link-color);
+}
+
+.language-offer a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--footer-bg);
+    display: flex;
+    flex-direction: column;
+    color: #70757a;
+    font-size: 15px;
+}
+
+.footer-location {
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+}
+
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: #70757a;
+    font-size: 14px;
+}
+
+/* RESPONSIVE PARA CELULARES */
+@media (max-width: 600px) {
+    .footer-links-container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+}
